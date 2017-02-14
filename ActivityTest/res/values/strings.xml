@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ActivityTest</string>
+    <string name="button_1_text">Button 1</string>
+    <string name="menu_add_item">Add</string>
+    <string name="menu_remove_item">Remove</string>
+    <string name="button_toast">Button_toast</string>
+    <string name="button_to_second_activity">SecActivity</string>
+    <string name="buttonHome">HOME</string>
+
+</resources>
