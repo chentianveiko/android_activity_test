@@ -6,6 +6,6 @@
     <string name="menu_remove_item">Remove</string>
     <string name="button_toast">Button_toast</string>
     <string name="button_to_second_activity">SecActivity</string>
-    <string name="buttonHome">HOME</string>
+    <string name="buttonHome">BACK</string>
 
 </resources>

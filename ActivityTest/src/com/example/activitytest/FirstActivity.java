@@ -1,8 +1,10 @@
 package com.example.activitytest;
 
+import android.R.string;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,11 +36,27 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent("com.example.activitytest.ACTION_START");
-				intent.addCategory("com.example.activitytest.MY_CATEGORY");
-				startActivity(intent);
+				String data = "欢迎使用测试工具!\r\n";
+				//Intent intent = new Intent("com.example.activitytest.ACTION_START");
+				//intent.addCategory("com.example.activitytest.MY_CATEGORY");
+				Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+				intent.putExtra("extral_data", data);
+				startActivityForResult(intent,1);
 			}
 		});
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		switch(requestCode){
+		case 1:
+			if(resultCode == RESULT_OK){
+				String returnedData = data.getStringExtra("data_return");
+				Log.d("FirstActivity", returnedData);
+			}
+			break;
+			default:
+		}
 	}
 	
 	@Override
